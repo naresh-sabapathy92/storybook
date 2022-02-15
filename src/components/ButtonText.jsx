@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Tooltip } from 'antd';
-import { Colors } from '../constants';
+import PropTypes from 'prop-types';
 
 const ButtonText = ({
     style,
@@ -8,22 +8,35 @@ const ButtonText = ({
     text,
     icon,
     prompt,
-    onClick
+    onClick,
+    size = 'middle',
+    disabled = false
 }) => {
-    const typeEnum = Object.freeze({
-        default: Colors.primary3,
-        success: Colors.success4,
-        warning: Colors.warning3,
-        error: Colors.error3
-    })
 
+    ButtonText.propTypes = {
+        style: PropTypes.object,
+        icon: PropTypes.object,
+        text: PropTypes.string,
+        prompt: PropTypes.string,
+        onClick: PropTypes.func,
+        type: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger']),
+        size: PropTypes.oneOf(['small', 'middle', 'large']),
+        disabled: PropTypes.bool
+    };
+
+    const classType = type === 'primary' ? '' :
+        type === 'success' ? 'text-success' :
+            type === 'warning' ? 'text-warning' :
+                type === 'danger' ? 'text-danger' :
+                    ''
     return (
         <Button
-            style={{ ...style, color: typeEnum[type] }}
-            className='text-button'
-            size='large'
+            style={style}
+            className={`text-button ${classType}`}
+            size={size}
             type='text'
             onClick={onClick}
+            disabled={disabled}
         >
             {text}
             <Tooltip title={prompt}>
