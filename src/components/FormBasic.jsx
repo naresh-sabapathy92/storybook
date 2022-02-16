@@ -2,6 +2,7 @@ import React from 'react';
 import { Form } from 'antd';
 import { ButtonActionBar } from '.';
 import { ButtonsObjectKeys, formItemRenderer } from '../constants/FormConstants';
+import PropTypes from 'prop-types';
 
 const FormBasic = ({
     form,
@@ -12,6 +13,16 @@ const FormBasic = ({
     labelSpan = { xl: 6, xxl: 6 },
     wrapperSpan = { xl: 12, xxl: 12 }
 }) => {
+
+    FormBasic.propTypes = {
+        form: PropTypes.object,
+        buttons: PropTypes.object,
+        onFinish: PropTypes.func,
+        formItems: PropTypes.array,
+        preserve: PropTypes.bool,
+        labelSpan: PropTypes.object,
+        wrapperSpan: PropTypes.object,
+    };
 
     const layout = {
         labelCol: { ...labelSpan },

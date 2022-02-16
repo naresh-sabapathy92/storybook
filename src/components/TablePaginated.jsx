@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Table, Space } from 'antd';
-import { InputSearch, ButtonPrimary, ButtonDropdown } from '..';
+import { InputSearch, ButtonPrimary, ButtonDropdown } from '.';
+import PropTypes from 'prop-types';
 
 const TablePaginated = ({
     searchPlaceHolder,
@@ -10,6 +11,15 @@ const TablePaginated = ({
     dropDown,
     buttons = [],
 }) => {
+
+    TablePaginated.propTypes = {
+        searchPlaceHolder: PropTypes.object,
+        columns: PropTypes.array,
+        buttons: PropTypes.object,
+        fetchData: PropTypes.func,
+        dataSource: PropTypes.array,
+        dropDown: PropTypes.bool
+    };
 
     const [callData, setCallData] = useState(false);
     const [loading, setLoading] = useState(false);

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Col, Row, Form, Space } from 'antd';
-import { ButtonActionBar, StepNumberIcon } from '..';
+import { ButtonActionBar, StepNumberIcon } from '.';
 import { ButtonsObjectKeys, formItemRenderer } from '../constants/FormConstants';
+import PropTypes from 'prop-types';
 
 const FormTwoStep = ({
     form,
@@ -13,6 +14,16 @@ const FormTwoStep = ({
     labelSpan = { xl: 6, xxl: 6 },
     wrapperSpan = { xl: 12, xxl: 12 }
 }) => {
+
+    FormTwoStep.propTypes = {
+        form: PropTypes.object,
+        steps: PropTypes.array,
+        buttons: PropTypes.object,
+        onFinish: PropTypes.func,
+        formItems: PropTypes.array,
+        labelSpan: PropTypes.object,
+        wrapperSpan: PropTypes.object,
+    };
 
     // Steps
     const [currentStep, setCurrentStep] = useState(0);

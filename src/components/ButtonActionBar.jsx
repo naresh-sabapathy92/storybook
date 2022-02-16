@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Space } from 'antd';
-import { ButtonPrimary } from '..';
+import { ButtonPrimary } from '.';
 
 const ButtonActionBar = ({ action, buttonProps, colSpans }) => {
 
