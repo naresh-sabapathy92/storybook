@@ -1,6 +1,6 @@
 import { Row, Col } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
-import { ButtonText } from "../components";
+import { ButtonBlockchainText, ButtonText } from "../components";
 
 export default {
     title: 'Components/Button/Text',
@@ -24,6 +24,9 @@ export const Text = () => {
             </Col>
             <Col>
                 <ButtonText text='Disabled' disabled />
+            </Col>
+            <Col>
+                <ButtonBlockchainText text='0000017e9079710b7d75e8ef0e984cac523e197d' />
             </Col>
         </Row>
     );

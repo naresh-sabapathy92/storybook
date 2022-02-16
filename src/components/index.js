@@ -1,4 +1,3 @@
-// export { default as ButtonPrimary } from './ButtonPrimary';
 export { default as ButtonPrimary } from './ButtonPrimary';
 export { default as ButtonPrimaryIcon } from './ButtonPrimaryIcon';
 export { default as ButtonText } from './ButtonText';

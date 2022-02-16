@@ -1,7 +1,7 @@
 import React from 'react';
-import { Menu, Dropdown, Button } from 'antd';
+import { Menu, Dropdown } from 'antd';
 import PropTypes from 'prop-types';
-import { ButtonPrimary } from '..';
+import { ButtonPrimary } from '.';
 
 const ButtonDropdown = ({ style, label, buttons = [], trigger = ['click'], size = 'middle' }) => {
 
@@ -22,8 +22,7 @@ const ButtonDropdown = ({ style, label, buttons = [], trigger = ['click'], size 
             overlay={menu}
             trigger={trigger}
         >
-            {/* <ButtonPrimary style={style} label={label} size={size} /> */}
-            <Button>Hello</Button>
+            <ButtonPrimary style={style} label={label} size={size} />
         </Dropdown>
     );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Skeleton, Typography } from 'antd';
+import PropTypes from 'prop-types';
 import { Colors } from '../constants';
 
 const CardDisplay = ({
@@ -12,6 +13,17 @@ const CardDisplay = ({
     hoverable = false,
     children,
 }) => {
+
+    CardDisplay.propTypes = {
+        title: PropTypes.string,
+        style: PropTypes.object,
+        bodyStyle: PropTypes.object,
+        header: PropTypes.oneOf(['primary', 'default']),
+        classType: PropTypes.oneOf(['primary', 'default']),
+        hoverable: PropTypes.bool,
+        loading: PropTypes.bool,
+        children: PropTypes.any
+    };
 
     const { Title } = Typography
 

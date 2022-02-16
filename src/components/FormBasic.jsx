@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form } from 'antd';
-import { ButtonActionBar } from '..';
+import { ButtonActionBar } from '.';
 import { ButtonsObjectKeys, formItemRenderer } from '../constants/FormConstants';
 
 const FormBasic = ({

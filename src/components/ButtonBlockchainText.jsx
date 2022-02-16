@@ -1,7 +1,7 @@
 import React from 'react';
 import { Space } from 'antd';
 import { CopyOutlined, LinkOutlined } from '@ant-design/icons';
-import { ButtonText } from '..';
+import { ButtonText } from '.';
 
 const ButtonBlockchainText = ({
     style,

@@ -4,9 +4,17 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import update from 'immutability-helper';
 import { Tooltip, Upload, message } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
-import { ButtonPrimary } from '..';
+import PropTypes from 'prop-types';
+import { ButtonPrimary } from '.';
 
 const ButtonUpload = ({ accept, uploadFile, defaultFileList, label, }) => {
+
+    ButtonUpload.propTypes = {
+        accept: PropTypes.string,
+        label: PropTypes.string,
+        uploadFile: PropTypes.func,
+        defaultFileList: PropTypes.array
+    };
 
     const [fileList, setFileList] = useState(defaultFileList);
 

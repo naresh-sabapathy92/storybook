@@ -186,6 +186,10 @@
   color: var(--shades-white);
 }
 
+.modal-display .ant-modal-title {
+  color: var(--shades-white);
+}
+
 .modal-display .ant-modal-close {
   color: var(--shades-white);
 }

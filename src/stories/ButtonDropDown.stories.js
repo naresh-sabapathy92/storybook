@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import { Row, Col } from 'antd';
-import { ButtonDropdown, ButtonPrimary } from '../components';
+import { ButtonDropdown } from '../components';
 
 export default {
     title: 'Components/Button/Dropdown',
@@ -10,8 +9,8 @@ export default {
 export const Dropdown = () => {
 
     const menuItems = [
-        { label: 'Button 1' },
-        { label: 'Button 2' },
+        { label: <>Button 1</> },
+        { label: <>Button 2</> },
     ];
 
     return (

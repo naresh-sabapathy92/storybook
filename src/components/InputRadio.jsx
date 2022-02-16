@@ -1,7 +1,15 @@
 import React from 'react';
 import { Radio } from 'antd';
+import PropTypes from 'prop-types';
 
 const InputRadio = ({ onChange, value, options = [], disabled = false }) => {
+
+    InputRadio.propTypes = {
+        value: PropTypes.any,
+        onChange: PropTypes.func,
+        options: PropTypes.array,
+        disabled: PropTypes.bool,
+    };
 
     const { Group } = Radio;
 

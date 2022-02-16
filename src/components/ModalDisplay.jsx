@@ -1,5 +1,6 @@
 import React from 'react';
 import { Modal } from 'antd';
+import PropTypes from 'prop-types';
 
 const ModalDisplay = ({
     title,
@@ -8,6 +9,15 @@ const ModalDisplay = ({
     onCancel,
     children
 }) => {
+
+    ModalDisplay.propTypes = {
+        width: PropTypes.string,
+        title: PropTypes.string,
+        onCancel: PropTypes.func,
+        visible: PropTypes.bool,
+        children: PropTypes.any,
+    };
+
     return (
         <Modal
             className='modal-display'
